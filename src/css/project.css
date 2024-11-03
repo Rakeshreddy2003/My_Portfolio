@@ -1,0 +1,64 @@
+.card-grid {
+    display: grid;
+    grid-gap: 20px;
+    padding: 20px;
+}
+
+/* Large screens: 4 cards in 2 rows */
+@media (min-width: 1024px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Medium screens: 2 cards per row */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small screens: 1 card per row */
+@media (max-width: 767px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.card-grid .card {
+    margin-left: 2rem;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 80%;           /* Card will take 80% of grid column */
+    aspect-ratio: 1;       /* Keeps the card square */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-grid img {
+    width: 100%;
+    height: auto;
+    max-height: 150px; /* Reduced the height of the image */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+    border-radius: 8px;
+}
+
+.card-content {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.card-content h3 {
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    margin-top: 5px;
+    font-size: 0.9rem;
+    color: #555;
+}

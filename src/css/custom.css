@@ -1,0 +1,61 @@
+.skills__content {
+    position: relative;       /* Ensures z-index works properly */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for lifting effect */
+}
+
+.skills__content:hover,.skills__content:active {
+    z-index: 2;
+    transform: translateY(-10px); /* Moves the block 10px upwards */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2); /* Adds shadow to make the lift more noticeable */
+}
+
+
+/* About */
+.a-dark:hover,
+.a-dark:active {
+    z-index: 2;
+    transform: translateY(-10px); /* Moves the block 10px upwards */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+
+}
+
+
+
+/* homesection */
+
+@keyframes typing {
+    from {
+        max-width: 0;
+    }
+    to {
+        max-width: 100%;
+    }
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
+.home__subtitle {
+    display: inline-block;
+    font-size: 1.5rem;
+    white-space: nowrap;           /* Prevents the text from wrapping */
+    overflow: hidden;              /* Hides the text while it's "typing" */
+    border-right: 2px solid black; /* Creates the blinking cursor effect */
+    max-width: 0;                  /* Starts with a max-width of 0 */
+    animation: typing 4s steps(30, end) 1s infinite, 
+               blinkCursor 0.75s step-end infinite;
+    animation-fill-mode: forwards; /* Ensures the text stays fully visible after typing */
+}
+
+
+/* card */
+
+.card:hover,
+.card:active{
+    z-index: 2;
+    transform: translateY(-10px); /* Moves the block 10px upwards */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
